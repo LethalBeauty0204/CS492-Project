@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Vintage Books Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Vintage Books Admin Panel</h1>
+    <nav>
+        <ul>
+          <li><button onclick="location.href='book_management.html';">Manage Books</button></li>
+          <li><button onclick="location.href='#';">Manage Categories</button></li>
+          <li><button onclick="location.href='#';">View Orders</button></li>
+          <li><button onclick="location.href='#';">Order Books</button></li>
+          <li style="float: right;"><button onclick="logout();">Logout</button></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <main>
+    <section id="admin-content">
+      <h2>Welcome to the Admin Panel!</h2>
+      <p>This is where you can manage various aspects of the Vintage Books website.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Vintage Books. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('isLoggedIn'); // Clear login status
+      window.location.href = 'login.html'; // Redirect to login page
+    }
+  </script>
+</body>
+
+</html>
