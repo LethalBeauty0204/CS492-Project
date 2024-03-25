@@ -37,6 +37,15 @@
    </div>
   </section>
 
+  <!--just testing out database pulls-->
+  <script>
+   async function loadInventory() {
+    var url = "/data-api/rest/Inventory?first=5"
+    var response = await fetch(url)
+    var payload = await response.json();
+    return payload.value;
+  </script>
+
   <section>
    <h2>Bestsellers</h2>
    <div class="book-list">
